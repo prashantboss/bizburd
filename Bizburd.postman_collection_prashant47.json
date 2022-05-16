@@ -1,0 +1,557 @@
+{
+	"info": {
+		"_postman_id": "c1748553-d939-4180-84a2-ce222948e596",
+		"name": "Bizburd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"shiva\",\n    \"password\":\"12345678\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth-jwt/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth-jwt",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"newuser\",\n    \"password\":\"12345678!shiva\",\n    \"password2\":\"12345678!shiva\",\n    \"email\":\"newuser@gmail.com\",\n    \"first_name\": \"new\",\n    \"last_name\":\"user\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Contact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InNoaXZhQDQ3YmlsbGlvbi5jb20iLCJ1c2VybmFtZSI6InNoaXZhIiwiZXhwIjoxNjUyODA0MDk5LCJvcmlnX2lhdCI6MTY1MjcxNzY5OX0.zuypqf4rzQt9gDTbrQz8hVf0UGMHMG8BZmnOPmxJPvo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"shiva\",\n    \"phone\":\"1234567868\",\n    \"address\": \"jabalpur\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/create-contact/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-contact",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Contact",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InNoaXZhQDQ3YmlsbGlvbi5jb20iLCJ1c2VybmFtZSI6InNoaXZhIiwiZXhwIjoxNjUyODA0MDk5LCJvcmlnX2lhdCI6MTY1MjcxNzY5OX0.zuypqf4rzQt9gDTbrQz8hVf0UGMHMG8BZmnOPmxJPvo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"shiva_newwww\",\n    \"phone\":\"1234567892\",\n    \"address\": \"jabalpur12\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/update-contact/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update-contact",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Contact Patch",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InNoaXZhQDQ3YmlsbGlvbi5jb20iLCJ1c2VybmFtZSI6InNoaXZhIiwiZXhwIjoxNjUyODA0MDk5LCJvcmlnX2lhdCI6MTY1MjcxNzY5OX0.zuypqf4rzQt9gDTbrQz8hVf0UGMHMG8BZmnOPmxJPvo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"shiva1230\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/update-contact/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update-contact",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Contact",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InNoaXZhQDQ3YmlsbGlvbi5jb20iLCJ1c2VybmFtZSI6InNoaXZhIiwiZXhwIjoxNjUyODA0MDk5LCJvcmlnX2lhdCI6MTY1MjcxNzY5OX0.zuypqf4rzQt9gDTbrQz8hVf0UGMHMG8BZmnOPmxJPvo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/contacts/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"contacts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Contact",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InNoaXZhQDQ3YmlsbGlvbi5jb20iLCJ1c2VybmFtZSI6InNoaXZhIiwiZXhwIjoxNjUyODA0MDk5LCJvcmlnX2lhdCI6MTY1MjcxNzY5OX0.zuypqf4rzQt9gDTbrQz8hVf0UGMHMG8BZmnOPmxJPvo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/contact/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"contact",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Contact",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InNoaXZhQDQ3YmlsbGlvbi5jb20iLCJ1c2VybmFtZSI6InNoaXZhIiwiZXhwIjoxNjUyODA0MDk5LCJvcmlnX2lhdCI6MTY1MjcxNzY5OX0.zuypqf4rzQt9gDTbrQz8hVf0UGMHMG8BZmnOPmxJPvo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/delete-contact/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"delete-contact",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Group",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InNoaXZhQDQ3YmlsbGlvbi5jb20iLCJ1c2VybmFtZSI6InNoaXZhIiwiZXhwIjoxNjUyODA0MDk5LCJvcmlnX2lhdCI6MTY1MjcxNzY5OX0.zuypqf4rzQt9gDTbrQz8hVf0UGMHMG8BZmnOPmxJPvo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Group-0\",\n    \"contacts\": [3,4]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/group/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"group",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Group",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InNoaXZhQDQ3YmlsbGlvbi5jb20iLCJ1c2VybmFtZSI6InNoaXZhIiwiZXhwIjoxNjUyODA0MDk5LCJvcmlnX2lhdCI6MTY1MjcxNzY5OX0.zuypqf4rzQt9gDTbrQz8hVf0UGMHMG8BZmnOPmxJPvo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/group/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"group",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Group",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InNoaXZhQDQ3YmlsbGlvbi5jb20iLCJ1c2VybmFtZSI6InNoaXZhIiwiZXhwIjoxNjUyODA0MDk5LCJvcmlnX2lhdCI6MTY1MjcxNzY5OX0.zuypqf4rzQt9gDTbrQz8hVf0UGMHMG8BZmnOPmxJPvo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Group123\",\n    \"contacts\": [3]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/group/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"group",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Group patch",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InNoaXZhQDQ3YmlsbGlvbi5jb20iLCJ1c2VybmFtZSI6InNoaXZhIiwiZXhwIjoxNjUyODA0MDk5LCJvcmlnX2lhdCI6MTY1MjcxNzY5OX0.zuypqf4rzQt9gDTbrQz8hVf0UGMHMG8BZmnOPmxJPvo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"contacts\": [5]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/group/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"group",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Group",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InNoaXZhQDQ3YmlsbGlvbi5jb20iLCJ1c2VybmFtZSI6InNoaXZhIiwiZXhwIjoxNjUyNjE4MDcxLCJvcmlnX2lhdCI6MTY1MjUzMTY3MX0.xi-rtJ3x2zwUln7-9SIBcok_7yBzn51wjXH2oLYlwDQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/group/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"group",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Group",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InNoaXZhQDQ3YmlsbGlvbi5jb20iLCJ1c2VybmFtZSI6InNoaXZhIiwiZXhwIjoxNjUyODA0MDk5LCJvcmlnX2lhdCI6MTY1MjcxNzY5OX0.zuypqf4rzQt9gDTbrQz8hVf0UGMHMG8BZmnOPmxJPvo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/groups/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"groups",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
